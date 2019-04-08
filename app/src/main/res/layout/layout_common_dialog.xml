@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="utils"
+            type="com.cloudcreativity.intellijSchool.utils.CommonDialogUtils" />
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:padding="5dip"
+        android:gravity="bottom">
+        <android.support.v7.widget.AppCompatEditText
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="@dimen/sp14"
+            android:text="@={utils.content}"
+            android:hint="@string/str_say_content" />
+        <android.support.v7.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Base.Widget.AppCompat.Button.Small"
+            android:theme="@style/Button"
+            android:onClick="@{()->utils.onSend()}"
+            android:text="@string/str_send"/>
+    </LinearLayout>
+</layout>

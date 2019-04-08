@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+    <external-files-path
+        name="files"
+        path="/" />
+    <external-path
+        name="images1"
+        path="images/" />
+    <!-- 这个是保存拍照图片的路径,必须配置。 -->
+    <external-path
+        name="images2"
+        path="DCIM" />
+    <files-path
+        name="cache1"
+        path="cache" />
+    <cache-path
+        name="cache2"
+        path="cache" />
+    
+    <external-cache-path name="cache3" path="/"/>
+</paths>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="utils"
+            type="com.cloudcreativity.intellijSchool.utils.BottomDialogUtils" />
+        <import type="android.view.View" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/gray_f1f1f1">
+        <TextView
+            android:onClick="@{()->utils.onShare()}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dip"
+            android:textSize="@dimen/sp14"
+            android:gravity="center"
+            android:background="@color/white"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="@string/str_share"/>
+        <TextView
+            android:onClick="@{()->utils.onPass()}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dip"
+            android:textSize="@dimen/sp14"
+            android:gravity="center"
+            android:layout_marginTop="1dip"
+            android:background="@color/white"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="@string/str_pass"/>
+        <TextView
+            android:onClick="@{()->utils.onDelete()}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dip"
+            android:textSize="@dimen/sp14"
+            android:visibility="@{utils.canDel?View.VISIBLE:View.GONE}"
+            android:gravity="center"
+            android:textColor="@color/refresh_red"
+            android:layout_marginTop="1dip"
+            android:background="@color/white"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="@string/str_delete"/>
+
+        <TextView
+            android:onClick="@{()->utils.onDismiss()}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dip"
+            android:textSize="@dimen/sp14"
+            android:gravity="center"
+            android:layout_marginTop="10dip"
+            android:background="@color/white"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="@string/str_close"/>
+    </LinearLayout>
+</layout>
